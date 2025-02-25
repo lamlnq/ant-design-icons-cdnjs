@@ -243,8 +243,8 @@ export class IconService {
       const suffix = this._enableJsonpLoading ? '.js' : '.svg';
       const url =
         (namespace
-          ? `${this._assetsUrlRoot}assets/${namespace}/${name}`
-          : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}`) + suffix;
+          ? `${this._assetsUrlRoot}${namespace}/${name}`
+          : `${this._assetsUrlRoot}${icon.theme}/${icon.name}`) + suffix;
 
       const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, url);
 
